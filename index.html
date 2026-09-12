@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nimbus OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="desktop" id="desktop">
+      <div class="aurora a-one"></div><div class="aurora a-two"></div><div class="grain"></div>
+      <header class="topbar">
+        <button class="brand" id="launcher" aria-label="Open app launcher"><span class="brand-mark">✦</span><span>Nimbus</span></button>
+        <div class="workspace"><span class="dot"></span>Personal Space</div>
+        <div class="system"><span class="system-item">◒ 72%</span><span class="system-item">◉ Wi-Fi</span><button class="time" id="clock">09:41</button></div>
+      </header>
+
+      <section class="desktop-icons" aria-label="Applications">
+        <button class="app-shortcut" data-open="files"><span class="icon folder-icon">▰</span><span>My files</span></button>
+        <button class="app-shortcut" data-open="notes"><span class="icon notes-icon">▤</span><span>Notes</span></button>
+        <button class="app-shortcut" data-open="terminal"><span class="icon terminal-icon">›_</span><span>Terminal</span></button>
+      </section>
+
+      <section class="welcome-card" id="welcome-card">
+        <div><p class="eyebrow">GOOD MORNING, ALEX</p><h1>Make room for<br /><em>what matters.</em></h1><p class="welcome-copy">Your calm corner of the internet is ready.</p></div>
+        <div class="orbit"><span>✦</span></div>
+        <button class="dismiss" id="dismiss" aria-label="Dismiss welcome message">×</button>
+      </section>
+
+      <section class="widgets" aria-label="Desktop widgets">
+        <article class="widget focus-widget"><div class="widget-head"><span class="eyebrow">FOCUS</span><button class="more">•••</button></div><div class="focus-content"><div class="progress-ring"><span>68<small>%</small></span></div><div><h2>Deep work</h2><p>47 min remaining</p><button class="text-button" id="focus-button">Pause focus</button></div></div></article>
+        <article class="widget weather-widget"><div class="weather-main"><span class="sun">☼</span><div><strong>22°</strong><p>Clear skies</p></div></div><p class="location">◉ San Francisco</p></article>
+      </section>
+
+      <div class="window files-window hidden" id="files" data-window><div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><strong>My files</strong><button class="close">×</button></div><div class="file-layout"><aside><p>FAVORITES</p><button class="selected">◫ Recents</button><button>♡ Starred</button><button>◒ Shared</button><p>LOCATIONS</p><button>⌂ Nimbus Drive</button></aside><div class="file-content"><div class="file-title"><div><h2>Recents</h2><p>Everything you've opened lately</p></div><button class="new-button">+ New</button></div><div class="file-grid"><div><i class="file-thumb peach">✦</i><b>Project Aurora</b><small>Folder · Today</small></div><div><i class="file-thumb blue">▤</i><b>Ideas & sketches</b><small>Document · Yesterday</small></div><div><i class="file-thumb green">◒</i><b>Summer memories</b><small>Folder · Jul 28</small></div></div></div></div></div>
+      <div class="window notes-window hidden" id="notes" data-window><div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><strong>Notes</strong><button class="close">×</button></div><div class="note-body"><p class="eyebrow">SEPTEMBER 12</p><h2>Small things, big energy.</h2><p>Today I want to protect some space for slow thinking. The useful kind of quiet that lets new ideas arrive.</p><div class="checkline"><input type="checkbox" checked /> Finish the project map</div><div class="checkline"><input type="checkbox" /> Call Mom after lunch</div><div class="checkline"><input type="checkbox" /> Take the long way home</div></div></div>
+      <div class="window terminal-window hidden" id="terminal" data-window><div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><strong>Terminal — alex@nimbus</strong><button class="close">×</button></div><div class="terminal-body"><p><span class="prompt">alex@nimbus ~ %</span> welcome</p><p>Welcome to Nimbus OS 1.0. Everything is right where you left it.</p><p><span class="prompt">alex@nimbus ~ %</span> <span class="typing">_</span></p></div></div>
+
+      <div class="launcher-panel hidden" id="launcher-panel"><p class="eyebrow">APPLICATIONS</p><button data-open="files"><span class="small-icon folder-icon">▰</span> My files <kbd>⌘ F</kbd></button><button data-open="notes"><span class="small-icon notes-icon">▤</span> Notes <kbd>⌘ N</kbd></button><button data-open="terminal"><span class="small-icon terminal-icon">›_</span> Terminal <kbd>⌘ T</kbd></button></div>
+      <nav class="dock" aria-label="Dock"><button data-open="files" title="My files"><span class="dock-icon folder-icon">▰</span></button><button data-open="notes" title="Notes"><span class="dock-icon notes-icon">▤</span></button><button data-open="terminal" title="Terminal"><span class="dock-icon terminal-icon">›_</span></button><button id="dock-launcher" title="All apps"><span class="dock-icon all-icon">▦</span></button></nav>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
